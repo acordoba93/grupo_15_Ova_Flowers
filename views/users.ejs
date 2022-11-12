@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+	<link rel="stylesheet" href="/css/styles.css">   
+    <title>Usuarios</title>
+</head>
+<body>
+	<%- include("partials/header") %>
+	<h2>Estos son nuestros usuarios</h2>
+	<main>
+		<section class="last-visit">
+			<div class="users">
+				<% for(let usuario of usuarios ) { %>
+					<div class="col-12 col-sm-6 col-lg-3">
+						<section class="product-box">
+							<a href="/users/detail/<%= usuario.id %>">
+								<figure class="product-box_image">
+									<img src="/images/usuarios/<%= usuario.imagen %>">
+								</figure>
+							</a>
+							<article class="product-box_description">
+								<h4>$<%= usuario.nombre %></h4>
+								<span><%= usuario.email %></span>
+								<p>talle<%= usuario.genero %></p>
+								<i class="fas fa-truck"></i>
+							</article>
+						</section>
+					</div>
+					<% } %>
+			</div>                
+		</section>
+	</main>
+    <%- include("partials/footer") %>
+</body>
+</html>

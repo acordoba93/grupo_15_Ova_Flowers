@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/styleslogin.css">
+    <link href="https: //fonts.googleapis.com/css2? family= Roboto:wght@300 & family= Silkscreen & display=swap" rel="stylesheet"></link>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <title>OvaFlowers Login</title>
+</head>
+<body>
+    <div class="container">
+        <div class="textos">
+            <h2>Clothes</h2>
+        </div>
+        <div>
+            <div class="form"> 
+                <form action="/users/usuarioLogueado" method="POST"> 
+                <input type="text" placeholder="Nombre de Usuario">
+                <input type="password" placeholder="Constraseña">
+                <button type="submit" name="entrar">ENTRAR</button>
+            </form>
+                <form action="/users/recuperarPassword" method="GET"></form>
+
+                <a href="/users/RecuperarPassword">¿Has olvidado tu contraseña?</a>
+                <hr>
+            <div>
+                <form action="/users/Register" method="GET">
+                    <button class="NuevaC" type="submit" name="Crear Nueva Cuenta">Crear Nueva Cuenta
+                    </button>
+                </form>
+            </div>                                                       
+        </div>
+
+        </div>
+    </div>
+    <%- include("partials/footer") %>
+</body>
+</html>

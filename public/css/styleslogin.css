@@ -1,0 +1,133 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+body{
+    background-image: url("../images/baner-ova.jpg");
+    background-size: 100% 100%;
+}
+.container{
+    width: 100%;
+    max-width: 1000px;
+    margin: auto;
+    height: 95vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    overflow: hidden;
+}
+.textos{
+    width: 60%;
+    margin-right: 70px;
+}
+.textos h2{
+    font-size: 55px;
+    color: transparent;
+}
+.textos p{
+    color: transparent
+    font-size: 26px;
+    font-size: 500;
+    line-height: 35px;
+}
+.form{
+    width: 396px;
+    height: 349px;
+    border-radius: 10px;
+    border: 1px solid #fff;
+    box-shadow: 0px 8px 32px rgba(153, 153, 153, 0.30);
+    background: #fff;
+    padding: 20px 0 20px 0;
+    margin: 40px 0px 0px 0;
+    text-align: center;
+}
+.form input{
+    width: 364px;
+    height: 52px;
+    background: #fff;
+    padding: 14px 16px;
+    font-size: 16px;
+    margin-bottom: 10px;
+    border-radius: 8px;
+    border: none;
+    border: 1px solid #d3d3d3;
+}
+.form input:focus{
+    border-color: #d3d3d3;
+    outline: none;
+}
+.form .entrar{
+    width: 364px;
+    height: 52px;
+    background: #000;
+    color: #fff;
+    border-radius: 8px;
+    font-size: 22px;
+    margin-bottom: 10px;
+}
+.form .entrar:hover{
+    background: #fff;
+    color: #000;
+}
+.form a{
+    display: inline-block;
+    text-decoration: none;
+    color: #020a87;
+    font-size: 15px;
+}
+.form a:hover{
+    cursor: hand;
+    text-decoration: underline;
+}
+.form hr{
+    margin: 0 20px 0 20px;
+    margin-bottom: 20px;
+    border: 0.2px solid #d3d3d3;
+}
+.form .NuevaC{
+    width: 189.8px;
+    height: 48px;
+    font-size: 18px;
+    border-radius: 6px;
+    border: none;
+    color: #fff;
+    background: #42b72a;
+    text-decoration: none;
+}
+.form .NuevaC:hover{
+    cursor: hand;
+    background: #3ffb33;
+}
+footer {
+    background-color: white;
+    padding-bottom: 10px;
+}
+.footer-items {
+    padding-top: 20px;
+    text-align: center;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+    padding-bottom: 10px;
+}
+.footer-items div {
+    flex-direction: row;
+    margin: 10px 10px;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+.end-footer {
+    display: block;
+}
+.footer-items i {
+    font-size: 30px;
+    color: #1259C3;
+    padding-bottom: 4px;
+    transition: transform .3s ease-in-out;
+}
+.footer-items i:hover {
+    color: #39B54A;
+}

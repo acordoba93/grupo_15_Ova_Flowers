@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+	<link rel="stylesheet" href="/css/styles.css">
+    <title>Formulario Editar Producto</title>	
+</head>
+<body>
+	<%- include("partials/header") %>
+    <div class="container products-wrapper">
+		<div class="row">
+			<div class="col-12">
+				<h2 class="products-title">Estás editando: <i><%= productToEdit.nombre %></i></h2>
+			</div>
+		</div>
+		<div class="col-12">
+			<form action="/products/edit/<%= productToEdit.id %>?_method=PUT" method="POST">
+				<div class="row product-detail">
+					<div class="col-12 col-md-6">
+						<label for="nombre" class="form-label">Nombre del producto:</label>
+						<input type="text" id="nombre" name="nombre" value="<%= productToEdit.nombre %>" placeholder="Ej: Remera Rethink" class="form-input">
+					</div>
+					<div class="col-12 col-md-6">
+						<label for="precio" class="form-label">Precio del producto:</label>
+						<input type="text" id="precio" name="precio" value="<%= productToEdit.precio %>" placeholder="Ej: 5678" class="form-input">
+					</div>
+					<div class="col-12 col-md-6">
+						<label for="talle" class="form-label">Talle:</label>
+						<input type="text" id="talle" name="talle" value="<%= productToEdit.talle %>" placeholder="Ej: L" class="form-input">
+					</div>
+					<div class="col-12 col-md-6">
+						<label for="categoria" class="form-label">Categoría:</label>
+						<select name="categoria" id="categoria" class="form-input">
+							<option value="">Elegí</option>
+							<option value="oferta">oferta</option>
+							<option value="precio de lista" >precio de lista</option>
+						</select>
+					</div>
+					<div class="col-12">
+						<label for="descripcion" class="form-label">Descipción:</label>
+						<textarea name="descripcion" id="descripcion" class="form-input"><%= productToEdit.descripcion %></textarea>
+					</div>
+					<div class="col-12">
+						<button type="submit" class="buy-now-button">Guardar producto</button>
+					</div>
+				</div>
+			</form>
+		</div>
+	</div>
+	<%- include("partials/footer") %>
+</body>
+</html>

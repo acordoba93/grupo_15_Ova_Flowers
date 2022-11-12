@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <link rel="stylesheet" href="/css/stylesDetail.css">
+  <title>Detalle del Usuario <%= usuario.id %></title>
+</head>
+  <%- include("partials/header") %>
+<body>
+  <main class="container">
+    <div class="left-column">
+      <img src="/images/usuarios<%= usuario.imagen %>" width="700" height="700" alt="remera">
+    </div>
+    <div class="right-column">
+      <div class="product-description">
+        <span><%= usuario.nombre %></span>
+        <h1><%= usuario.email %></h1>
+        <p><%= usuario.genero %></p>
+      </div>
+      <div class="product-price">
+        <span><%= usuario.usuario %></span>
+      </div>
+      <div class="button-options">
+        <form action="/users/delete/<%= usuario.id %>?_method=DELETE" method="POST" style="display: inline-flex">
+          <button type="submit" class="action-button-delete">Eliminar</button>
+        </form>
+        <a href="/users/edit/<%= usuario.id %>" class="action-button-edit">Editar usuario</a>
+      </div>
+    </div>
+
+  </main>
+
+
+
+  <%- include("partials/footer") %>
+</body>
+</html>

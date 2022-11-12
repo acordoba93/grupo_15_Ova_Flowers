@@ -1,0 +1,272 @@
+[
+ {
+  "id": 1,
+  "nombre": "remera seaquest",
+  "descripcion": "remera de anime",
+  "talle": "M",
+  "precio": "2222",
+  "imagen": "remera-rtk.2.jpg",
+  "categoria": ""
+ },
+ {
+  "id": 4,
+  "nombre": "remera seaquest",
+  "descripcion": "remera de serie",
+  "talle": "M",
+  "precio": 4700,
+  "imagen": "remera-rtk.5.jpg",
+  "categoria": "precio de lista"
+ },
+ {
+  "id": 5,
+  "nombre": "remera rethink",
+  "descripcion": "remera de arte",
+  "talle": "M",
+  "precio": 4900,
+  "imagen": "remera-rtk.6.jpg",
+  "categoria": "precio de lista"
+ },
+ {
+  "id": 1664754922601,
+  "nombre": "ghfgh",
+  "descripcion": "dfgdf",
+  "talle": "dg",
+  "precio": "300",
+  "imagen": "remera-rtk.2.jpg"
+ },
+ {
+  "id": 1664755967084,
+  "nombre": "hfghgf",
+  "descripcion": "",
+  "talle": "",
+  "precio": "",
+  "imagen": "remera-rtk.2.jpg"
+ },
+ {
+  "id": 1664755998696,
+  "nombre": "remeron",
+  "descripcion": "remeron",
+  "talle": "l",
+  "precio": "4215",
+  "imagen": "remera-rtk.2.jpg"
+ },
+ {
+  "id": 1665893874218,
+  "nombre": "",
+  "descripcion": "",
+  "talle": "",
+  "precio": "",
+  "imagen": "remera-rtk.2.jpg"
+ },
+ {
+  "id": 1665893891085,
+  "nombre": "remeron",
+  "descripcion": "",
+  "talle": "",
+  "precio": "20000",
+  "imagen": "remera-rtk.2.jpg"
+ },
+ {
+  "id": 1666056117839,
+  "nombre": "remeron",
+  "descripcion": "",
+  "talle": "",
+  "precio": "",
+  "imagen": "remera-rtk.2.jpg",
+  "categoria": ""
+ },
+ {
+  "id": 1666056206700,
+  "nombre": "todpp",
+  "descripcion": "",
+  "talle": "",
+  "precio": "",
+  "imagen": "remera-rtk.2.jpg",
+  "categoria": ""
+ },
+ {
+  "id": 1666057875825,
+  "imagen": "remera-rtk.2.jpg"
+ },
+ {
+  "id": 1666143616272,
+  "nombre": "algo",
+  "descripcion": "",
+  "talle": "",
+  "precio": "",
+  "categoria": ""
+ },
+ {
+  "id": 1666143755822,
+  "nombre": "perosll",
+  "descripcion": "",
+  "talle": "",
+  "precio": "",
+  "categoria": "",
+  "imagen": "ova-localStorage.jpg"
+ },
+ {
+  "id": 1666143924131,
+  "nombre": "lucas",
+  "descripcion": "",
+  "talle": "",
+  "precio": "",
+  "categoria": "",
+  "imagen": "ova-localStorage.jpg"
+ },
+ {
+  "id": 1666144383255,
+  "nombre": "pepe",
+  "descripcion": "",
+  "talle": "",
+  "precio": "",
+  "categoria": "",
+  "imagen": "ova-logo.jpg"
+ },
+ {
+  "id": 1666144520518,
+  "nombre": "juan",
+  "descripcion": "",
+  "talle": "",
+  "precio": "",
+  "categoria": "",
+  "imagen": "ova-logo.jpg"
+ },
+ {
+  "id": 1666144641515,
+  "nombre": "juan",
+  "descripcion": "",
+  "talle": "",
+  "precio": "",
+  "categoria": "",
+  "imagen": "1666144641506b23f127a37c57a803389122128bc43ec.jpg"
+ },
+ {
+  "id": 1667737991565,
+  "imagen": "ova-logo.jpg"
+ },
+ {
+  "id": 1667740256953,
+  "nombre": "",
+  "descripcion": "",
+  "talle": "",
+  "precio": "",
+  "categoria": "",
+  "imagen": "ova-logo.jpg"
+ },
+ {
+  "id": 1667740419877,
+  "nombre": "",
+  "descripcion": "",
+  "talle": "",
+  "precio": "",
+  "categoria": ""
+ },
+ {
+  "id": 1667740621641,
+  "nombre": "",
+  "descripcion": "",
+  "talle": "",
+  "precio": "",
+  "categoria": "",
+  "imagen": "req.file.imagen"
+ },
+ {
+  "id": 1667741065185,
+  "nombre": "",
+  "descripcion": "",
+  "talle": "",
+  "precio": "",
+  "categoria": ""
+ },
+ {
+  "id": 1667767769963,
+  "nombre": "",
+  "descripcion": "",
+  "talle": "",
+  "precio": "",
+  "categoria": ""
+ },
+ {
+  "id": 1667769033252,
+  "descripcion": "saco polar",
+  "talle": "m",
+  "precio": "",
+  "categoria": ""
+ },
+ {
+  "id": 1667769097552,
+  "descripcion": "saco polar",
+  "talle": "m",
+  "precio": "",
+  "categoria": ""
+ },
+ {
+  "id": 1667769275357,
+  "descripcion": "",
+  "talle": "",
+  "precio": "",
+  "categoria": ""
+ },
+ {
+  "id": 1667794817409,
+  "descripcion": "",
+  "talle": "",
+  "precio": "",
+  "categoria": "",
+  "imagen": "imagenProducto"
+ },
+ {
+  "id": 1667794891232,
+  "descripcion": "de algodon",
+  "talle": "xl",
+  "precio": "5400",
+  "categoria": "oferta",
+  "imagen": "imagenProducto"
+ },
+ {
+  "id": 1667795091728,
+  "nombre": "pantalon",
+  "descripcion": "de algodon",
+  "talle": "s",
+  "precio": "5400",
+  "categoria": "oferta",
+  "imagen": "imagenProducto"
+ },
+ {
+  "id": 1667795212256,
+  "nombre": "pantalon",
+  "descripcion": "de algodon",
+  "talle": "xxl",
+  "precio": "5400",
+  "categoria": "oferta",
+  "imagen": "imagenProducto"
+ },
+ {
+  "id": 1667795295492,
+  "nombre": "pantalon",
+  "descripcion": "de algodon",
+  "talle": "xxs",
+  "precio": "5400",
+  "categoria": "oferta",
+  "imagen": "imagenProducto"
+ },
+ {
+  "id": 1667795406833,
+  "nombre": "Lucas Gonzalo",
+  "descripcion": "dfgdfsdfsd",
+  "talle": "l",
+  "precio": "1000",
+  "categoria": "precio de lista",
+  "imagen": "imagenProducto"
+ },
+ {
+  "id": 1667795661611,
+  "nombre": "Lucas Gonzalo",
+  "descripcion": "dfgdfsdfsd",
+  "talle": "l",
+  "precio": "1000",
+  "categoria": "precio de lista",
+  "imagen": "166779566159620220705_114402.jpg"
+ }
+]

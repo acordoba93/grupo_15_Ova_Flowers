@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="/css/stylesregister.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+    <title>Registro</title>
+</head>
+<body>
+   <header>
+   </header>
+    <div class="formulario">
+    <h2>
+       Registrate 
+    </h2>
+       </div>
+   <form action="/usuarios/..." method="POST" enctype="multipart/form-data">    
+   <div class="formu-datos">
+     <label class="dato" for="Nombre">NOMBRE </label>
+     <input type="text" name="nombre" id="nombre">
+     <br> 
+     <label class="dato" for="Contraseña">CONTRASEÑA </label>
+     <input type="password" name="Contraseña Actual " id="Contraseña">
+     <br>   
+     <label class="dato" for="Repetir Contraseña">REPETIR CONTRASEÑA </label>
+     <input type="password" name="Repetir Contraseña" id="repetir Contraseña">
+     <br>
+     <div class="botonera">
+              <button class="botones" type="reset">Borrar</button> 
+         <button class="botones" type="submit">Registrate</button>
+         <p> ¿YA TENES CUENTA? </p> <a class="hiper" href="/Login"> INGRESA  AQUI </a>
+     </div>             
+   </div>
+   <div class="banner">
+      <img src="images/ova-logo.jpg" alt="logotipo">
+   </div>
+</form>
+   <%- include("partials/footer") %>
+ </body>
+</html>

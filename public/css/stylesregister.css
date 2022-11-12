@@ -1,0 +1,136 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    background-color: white;
+    }
+    header img {
+        width: 50%;
+    }
+    .formu-datos {
+        /*max-width: 60%;*/
+        width: 100%;
+        border: 3px solid black;
+        margin: 30px 2px;
+        border-radius: 8px;
+        display: flex;
+        flex-direction: column;
+        background-image: url("../images/baner-ova.jpg");
+        }
+    h2 {
+        font-size: 100px;
+        font-family: 'Roboto', sans-serif;
+        font-family: 'Courier New', Courier, monospace;
+        display: flex;
+        justify-content: center;
+    }
+    p {
+        font-size: 30px;
+        padding: 10px 10px;
+    }
+    .dato {
+        display: block;
+        font-size: 30px;
+        color: white;
+        background-color: #1A1818;
+        width: 30%;
+        padding: 10px 20px;
+        box-shadow: 2px 2px 5px #000000;
+        border-radius: 5%;
+        margin-left: 10px;
+    }
+    .formu-datos input{
+        font-size: 20px;
+    }
+    .dato-numero {
+        display: block;
+        font-size: 30px;
+        color: white;
+        background-color: #1A1818;
+        width: 30%;
+        padding: 10px 20px;
+        box-shadow: 2px 2px 5px #000000;
+        border-radius: 5%;
+        margin-left: 10px;
+    }
+    .dato-genero {
+        font-size: 25px;
+        padding: 10px 20px;
+        margin-left: 10px;
+        box-shadow: 2px 2px 5px #000000;
+        border-radius: 5%;
+        margin-left: 10px;
+        }
+    .formu-datos input {
+        width: 30%;
+        border: 1.5px solid grey;
+        padding: 10px 20px;
+        margin: 10px 150px ;
+        border-radius: 4px;
+    }
+    .botones {
+        border-radius: 5px;
+        color: rgb(240, 248, 245);
+        width: 120px;
+        font-size: 20px;
+        margin: 15px 30px;
+        background-color: rgb(10, 10, 10);
+        border: none;
+        display: inline-block;
+    }
+    .botones:hover{
+        background-color: rgb(50, 50, 53);
+    }
+    .banner {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+    }
+    div .foto-formu {
+        width: 15%;
+        margin: 5px 10px;
+        border-radius: 5%;
+     }
+     .botonera {
+        display: flex;
+        align-items: flex-end;
+     }
+     footer {
+        background-color: white;
+        padding-bottom: 10px;
+    }
+    .footer-items {
+        padding-top: 20px;
+        text-align: center;
+        display: flex;
+        flex-wrap: nowrap;
+        justify-content: center;
+        padding-bottom: 10px;
+    }
+    .footer-items div {
+        flex-direction: row;
+        margin: 10px 10px;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+    }
+    .end-footer {
+        display: block;
+    }
+    .footer-items i {
+        font-size: 30px;
+        color: #1259C3;
+        padding-bottom: 4px;
+        transition: transform .3s ease-in-out;
+    }
+    .footer-items i:hover {
+        color: #39B54A;
+    }
+    .hiper {
+        font-size: 20px;
+        color:rgb(30, 9, 77);
+        padding-bottom: 15px;
+        display: flex;
+        text-align: center;
+    }
+

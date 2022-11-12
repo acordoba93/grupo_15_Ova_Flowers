@@ -1,0 +1,3 @@
+A esta altura de la cursada y habiendo pasado 3 sprint intensos y los que estan por venir.....
+Podemos empezar a compartir ideas que aunque pensemos que son minimas y sin mucha logica, no tener miedo de decirlas. Ya que sabemos que convivimos con el error debido se esta aprendiendo. Continuar con este flujo de comunicacion que tenemos tanto en el dia a dia como tambien durante las clases presenciales. Seguir forjando esa camaraderia y compañerismo que se manifiesta todo el tiempo.
+Seguramente puntos a mejorar se tendran pero son pocos notorios ya que cada uno actua resposablente tanto en lo individual como el lo grupal para que todo funcione.   

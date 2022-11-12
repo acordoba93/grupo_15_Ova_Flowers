@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="/css/stylesregister.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+    <title>Registro</title>
+</head>
+<body>
+   <header>
+   </header>
+
+    <div class="formulario">
+    <h2>
+       Registrate 
+    </h2>
+    </div>    
+         <form action="/users/register" method="POST" enctype="multipart/form-data">
+            <div class="form-data">
+               <div class="col-md-6 my-1">
+                  <div class="form-group">
+                     <label><b>Nombre completo:</b></label>
+                     <input 
+                        type="text" 
+                        name="nombre" 
+                        class="form-control <%= locals.errors && errors.nombre ? 'is-invalid' : null %>"
+                        value="<%= locals.oldData ? oldData.nombre : null %>"
+                     >
+                     <% if (locals.errors && errors.nombre) { %>
+                        <div class="text-danger">
+                           <%= errors.nombre.msg %> 
+                        </div>
+                     <% } %>
+                  </div>
+               </div>
+              
+     <br>
+       <label class="dato-numero" for="Fecha de Nacimiento">FECHA DE NACIMIENTO</label>
+     <input 
+     type="date" 
+     name="nacimiento"  
+     min="1900-01-01" 
+     max="2100-01-01"
+     value="<%= locals.oldData && oldData.nacimiento ? oldData.nacimiento : '' %>"
+     >
+     <% if(locals.errors && errors.nacimiento) {%>
+         <div class="errors">
+            <%= errors.nacimiento.msg %>
+         </div>
+         <% } %>
+   </div>
+   <div class="col-md-6 my-1">
+      <div class="form-group">
+         <label><b>País de nacimiento:</b></label>
+         <select 
+            name="pais" 
+            class="form-select <%= locals.errors && errors.pais ? 'is-invalid' : null %>"
+         >
+            <option value="">Elegí un país</option>
+            <%  
+               let paises = ['Argentina', 'Bolivia', 'Brasil', 'Colombia', 'Chile', 'Ecuador', 'Paraguay', 'Perú', 'Uruguay', 'Venezuela'];
+            %>
+            <% for (const unPais of paises) { %>
+               <option 
+                  value="<%= unPais %>"
+                  <%= locals.oldData && (unPais === oldData.pais) ? 'selected' : null %> 
+               > <%= unPais %> </option>
+            <% } %>
+         </select>
+         <% if (locals.errors && errors.pais) { %>
+            <div class="text-danger">
+               <%= errors.pais.msg %>
+            </div>
+         <% } %>
+      </div>
+   </div>
+     <br>
+     <label class="dato-numero" for="celular">CELULAR</label>
+     <input 
+     type="number" 
+     name="celular" 
+     id="celular" 
+     value="<%= locals.oldData ? oldData.celular : null %>"
+     >
+     <% if (locals.errors && errors.celular) { %>
+      <div class="text-danger">
+         <%= errors.celular.msg %>
+      </div>
+     <% } %>
+
+     <label class="dato" for="Email">EMAIL</label>
+     <input 
+     type="email" 
+     name="email" 
+     id="Email" 
+     value="<%= locals.oldData ? oldData.email : null %>"
+     >
+     <% if (locals.errors && errors.email) { %>
+      <div class="text-danger">
+         <%= errors.email.msg %> 
+      </div>
+   <% } %>
+     <br> 
+     <label class="dato" for="Usuario">USUARIO </label>      
+     <input 
+     type="text" 
+     name="usuario" 
+     id="Usuario" 
+     value="<%= locals.oldData ? oldData.usuario : null %>"
+     >
+   <% if (locals.errors && errors.usuario) { %>
+      <div class="text-danger">
+         <%= errors.usuario.msg %> 
+      </div>
+   <% } %>
+     <br>
+     <label class="dato" for="Contraseña">CONTRASEÑA </label>
+     <input 
+     type="password" 
+     name="password" 
+     id="Contraseña" 
+     value="<%= locals.oldData ? oldData.password : null %>"
+     >
+   <% if (locals.errors && errors.password) { %>
+      <div class="text-danger">
+         <%= errors.password.msg %> 
+      </div>
+   <% } %>
+     <br>   
+     <label class="dato" for="Repetir Contraseña">REPETIR CONTRASEÑA </label>
+     <input 
+     type="password" 
+     name="repetir" 
+     id="repetir Contraseña" 
+     value="<%= locals.oldData ? oldData.repetir : null %>"
+     >
+   <% if (locals.errors && errors.repetir) { %>
+      <div class="text-danger">
+         <%= errors.repetir.msg %> 
+      </div>
+   <% } %>
+     <br>
+     <label class="dato-numero" for="foto">FOTO PERFIL </label>
+     <input 
+     type="file" 
+     name="imagen" 
+     id="foto">
+   <% if (locals.errors && errors.imagen) { %>
+      <div class="text-danger">
+         <%= errors.imagen.msg %> 
+      </div>
+   <% } %>
+     <br>
+     <div class="botonera">
+              <button class="botones" type="reset">Borrar</button> 
+         <button class="botones" type="submit">Registrate</button>
+         <p> ¿YA TENES CUENTA? </p> <a class="hiper" href="Login"> INGRESA  AQUI </a>
+     </div>             
+   </div>
+   <div class="banner">
+      <img src="images/ova-logo.jpg" alt="logotipo">
+   </div>
+</form>
+   <%- include("partials/footer") %>
+ </body>
+</html>

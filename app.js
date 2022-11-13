@@ -12,6 +12,11 @@ const cookies= require("cookie-parser");
 
 app.set('view engine', 'ejs')
 
+app.use(session({
+  secret: 'secreto!',
+  resave: false,
+  saveUninitialized: false,
+}));
 
 app.use(express.static("./public"));
 app.use(express.urlencoded({extended:false}));
@@ -21,11 +26,7 @@ app.use(methodOverride("_method"));
 app.use('/', mainRoutes);
 app.use("/products", productsRoutes);
 app.use("/users", usersRoutes);
-app.use(session({
-  secret: 'secreto!',
-  resave: false,
-  saveUninitialized: false,
-}));
+
 
 app.use(cookies());
 

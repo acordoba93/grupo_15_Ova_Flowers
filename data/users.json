@@ -246,5 +246,17 @@
   "password": "$2a$10$BZO6A5kgtoTJDeIE6GTrGu9v5ypumOymO8uqKG1q.3MOr9Kwy9pmi",
   "repetir": "$2a$10$C/hT.xr9YOFhuhJwapduxuB9zeBvDcwi6Te6iXjRhTGmcHPcPF3sa",
   "imagen": "user.imagen1668129994594.jpg"
+ },
+ {
+  "id": 1668298579765,
+  "nombre": "luis",
+  "nacimiento": "2022-11-08",
+  "pais": "Argentina",
+  "celular": "123456",
+  "email": "florsoto662@gmail.com",
+  "usuario": "10081028",
+  "password": "$2a$10$RqdFOWZ.OsH1LHwcZiLFnO8Zb4lz4oVdtI6.i5SGhYwa0vO7vxpiy",
+  "repetir": "$2a$10$PXULsHeG18CYggK.It0wwOC6Kk8uyhWlJLljBnbPk5p5KEUk4YEbK",
+  "imagen": "user.imagen1668298579750.jpg"
  }
 ]

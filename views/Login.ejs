@@ -16,9 +16,28 @@
         </div>
         <div>
             <div class="form"> 
-                <form action="/users/usuarioLogueado" method="POST"> 
-                <input type="text" placeholder="Nombre de Usuario">
-                <input type="password" placeholder="Constraseña">
+                <form action="/users/Login" method="POST"> 
+                <input 
+                type="text" 
+                name="email" 
+                placeholder="Correo Electronico" 
+                value="<%= locals.oldData ? oldData.email : null %>"
+                >
+
+                 <% if (locals.errors && errors.email) { %>
+                    <div class="text-danger">
+                       <%= errors.email.msg %> 
+                    </div>
+                 <% } %>
+                <input 
+                type="password" 
+                name= password 
+                placeholder="Contraseña">
+                <% if (locals.errors && errors.password) { %>
+                    <div class="text-danger">
+                       <%= errors.password.msg %> 
+                    </div>
+                 <% } %>
                 <button type="submit" name="entrar">ENTRAR</button>
             </form>
                 <form action="/users/recuperarPassword" method="GET"></form>

@@ -5,12 +5,45 @@ const path = require("path");
 const usersFilePath = path.join(__dirname, "../data/users.json");
 const users = JSON.parse(fs.readFileSync(usersFilePath, "utf-8"));
 const bcryptjs = require("bcryptjs");
-const user  = require("../models/user");
+const user  = require("../modeloUser/user");
 
 const usersController = {
   login: (req, res) =>{
     res.render("Login");
-    },
+  },
+  processLogin: (req, res) => {
+    let userToLogin = user.findByField('email', req.body.email);
+
+    if(userToLogin) {
+			let isOkThePassword = bcryptjs.compareSync(req.body.password, userToLogin.password);
+			if (isOkThePassword) {
+				delete userToLogin.password;
+				req.session.userLogged = userToLogin;
+
+				if(req.body.remember_user) {
+					res.cookie('userEmail', req.body.email, { maxAge: (1000 * 60) * 60 })
+				}
+
+				return res.redirect("/users/");
+			} 
+			return res.render('Login', {
+				errors: {
+					password: {
+						msg: 'Las credenciales son inválidas'
+					}
+				}
+			});
+		}
+
+		return res.render('Login', {
+			errors: {
+				email: {
+					msg: 'No se encuentra este email en nuestra base de datos'
+				}
+			}
+		});
+
+  },
   admin: (req, res) => {
     res.send("Hola Administrador: " + req.query.user);
   },
@@ -24,7 +57,7 @@ const usersController = {
   detalle: (req, res) =>{
     const users = JSON.parse(fs.readFileSync(usersFilePath, "utf-8"));
     const usuario = users.find((p) => p.id == req.params.id);
-    res.render("userDetail", { usuario });
+    res.render("userProfile", { usuario });
 
     },
   recuperarPassword: (req, res) =>{
@@ -34,27 +67,6 @@ const usersController = {
     const users = JSON.parse(fs.readFileSync(usersFilePath, "utf-8"));
 
     const resultValidation = validationResult(req);
-
-    let  userInDB  =  "lucasgarciacab@hotmail.com";
-    
-    //Usuario.findByField ( email ,  req.body.email );
-
-
-
-    // if (userInDB) {
-		// 	return res.render('Register', {
-		// 		errors: {
-		// 			email: {
-		// 				msg: 'Este email ya está registrado'
-		// 			}
-		// 		},
-		// 		oldData: req.body
-		// 	});
-		// };
-
-
-
-
 
   if(resultValidation.isEmpty()){
 
@@ -120,64 +132,3 @@ res.redirect("/users");
   };
 
 module.exports = usersController;
-
-// const fs = require("fs");
-// const path = require("path");
-
-// const usersFilePath = path.join(__dirname, "../data/users.json");
-// const users = JSON.parse(fs.readFileSync(usersFilePath, "utf-8"));
-
-// const toThousand = (n) => n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
-
-// const loginController = {
-//     visualizarLogin: function ( req , res) {
-//         res.render("login")
-//     },
-
-
-
-// // proceso de login, leer los usuarios y verifica la contraseña
-
-// login: function (req, res) {
-//        return res.render('home');
-// },
-
-// logueado: function(req, res){
-//     console.log("login exitoso");
-//     return res.render('usuarioLogueado');
-// },
-
-// processLogin: function(req, res) {
-//     let errors = validationResult(req);
-//     if (errors.isEmpty()) {
-//         let usersJSON = fs.readFileSync('users.json', { encoding: "UTF-8"})
-//         let users;
-//         if (usersJSON == "") {
-//             users = [];
-//         } else {
-//             users = JSON.parce(usersJSON);
-//         }
-//         for (let i = 0; i < users.length; i++) {
-//             if (users[i].userName == req.body.urerName) {
-//                 if (bcrypt.compareSync(req.body.password, users[i].password))
-//                      usuarioALoguearse = users[i];
-//                     break;
-//                }
-//            }
-                
-//         }
-//         if (usuarioALoguearse == undefined) {
-//             return res.render('login', {errors: [
-//                 {msg: 'Credenciales invalidas'}
-//             ]});
-            
-        
-//         req.session.usuarioLogueado = usuarioALoguearse;    
-//     } else {
-//         return res.render('login', {errors: errors.errors});
-//     }
-// }
-
-// }
-
-// module.exports = loginController;

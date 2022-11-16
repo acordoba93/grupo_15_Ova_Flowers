@@ -9,6 +9,7 @@ const usersRoutes = require("./routes/usersRoutes");
 const methodOverride = require("method-override");
 const session = require('express-session');
 const cookies= require("cookie-parser");
+const userLoggedMiddleware = require("./middleware/userLoggedMiddleware");
 
 
 app.set('view engine', 'ejs')
@@ -30,6 +31,8 @@ app.use("/users", usersRoutes);
 
 
 app.use(cookies());
+
+app.use(userLoggedMiddleware);
 
 app.use((req, res, next) => next(createError(404)));
 

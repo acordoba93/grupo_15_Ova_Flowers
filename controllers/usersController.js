@@ -24,7 +24,7 @@ const usersController = {
 					res.cookie('userEmail', req.body.email, { maxAge: (1000 * 60) * 60 })
 				}
 
-				return res.redirect("/users/");
+				return res.redirect("/users/profile");
 			} 
 			return res.render('Login', {
 				errors: {
@@ -46,6 +46,11 @@ const usersController = {
   },
   admin: (req, res) => {
     res.send("Hola Administrador: " + req.query.user);
+  },
+  profile: (req, res) => {
+    res.render("userProfile", {
+      user: req.session.userLogged
+    });
   },
   index: (req, res) =>{
     const users = JSON.parse(fs.readFileSync(usersFilePath, "utf-8"));

@@ -1,6 +1,6 @@
 //TABLA PRODUCTOS//
 module.exports = (sequelize, dataTypes) => {
-    const alias = "Products";
+    const alias = "Producto";
   
     const cols = {
       Id: {
@@ -22,12 +22,12 @@ module.exports = (sequelize, dataTypes) => {
   
       },
       
-      IdProductosCategoria: {
-        type: dataTypes.INTEGER,
-        foreignKey: true,
-        autoIncrement: true
+      //IdProductosCategoria: {
+      //  type: dataTypes.INTEGER,
+      //  foreignKey: true,
+      //  autoIncrement: true
   
-      },
+      //},
       //ProductosCyT: {
         //type: dataTypes.STRING,
         //foreignKey: true
@@ -36,11 +36,21 @@ module.exports = (sequelize, dataTypes) => {
     };
   
     const config = {
-      tableName :"Productos",
+      tableName :"Products",
       timestamps : false
     };
   
   
-    const User = sequelize.define(alias,cols,config);
-    return Products  
+    const Producto= sequelize.define(alias,cols,config);
+
+    Producto.associate = function (models) {
+      Producto.belongsToMany(models.Cayegoria, {
+        as: "ProductoCategoria",
+        through: "ProductoCategoria",
+        foreignKey: "Productos-Id",
+        otherKey: "Categorias-Id",
+        timestamps: false
+      });
+     }
+    return Productos  
   }

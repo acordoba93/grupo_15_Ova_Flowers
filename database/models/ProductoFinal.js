@@ -1,6 +1,6 @@
-//TABLA PRODUCTOS-CATEGORIAS--T.PIVOT//
+//TABLA PRODUCTOS-COLORES Y TALLES--T.PIVOT//
 module.exports = (sequelize, dataTypes) => {
-    const alias = "ProdutsCategory";
+    const alias = "ProdutosCyT";
   
     const cols = {
       Id: {
@@ -9,28 +9,34 @@ module.exports = (sequelize, dataTypes) => {
         autoIncrement : true
   
       },
-      IdProductos: {
+      IdProductosCategoria: {
         type: dataTypes.INTEGER,
         foreignKey: true,
         autoIncrement: true
   
       },
-      
-      IdCategorias: {
+        IdColores: {
         type: dataTypes.INTEGER,
         foreignKey: true,
         autoIncrement: true
   
       },
-     
+      IdTalles: {
+        type: dataTypes.INTEGER,
+        foreignKey: true,
+        autoIncrement: true
+  
+      },     
     };
   
     const config = {
-      tableName :"ProductosCategorias",
+      tableName :"ProductsCyT",
       timestamps : false
     };
   
   
-    const User = sequelize.define(alias,cols,config);
-    return ProdutsCategory  
-  }
+    const ProductosCyT = sequelize.define(alias,cols,config);
+
+    }
+    return ProductosCyT    
+  } 

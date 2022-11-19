@@ -1,6 +1,6 @@
 //TABLA TALLES //
 module.exports = (sequelize, dataTypes) => {
-    const alias = "Size";
+    const alias = "Talles";
   
     const cols = {
       Id: {
@@ -22,11 +22,23 @@ module.exports = (sequelize, dataTypes) => {
     };
   
     const config = {
-      tableName :"Talles",
+      tableName :"Sizes",
       timestamps : false
     };
   
   
-    const User = sequelize.define(alias,cols,config);
-    return Size 
+    const Talles = sequelize.define(alias,cols,config);
+
+    Talles.associate = function (models) {
+      Talles.belongsToMany(models.Producto, {
+        as: "ProductoFinal",
+        through: "ProductoFinal",
+        foreignKey: "Talle-Id",
+        otherKey: "ProductoCategoria-Id",
+        otherKey: "Colores-Id",
+        timestamps: false
+      });
+     }
+
+    return Talles 
   }

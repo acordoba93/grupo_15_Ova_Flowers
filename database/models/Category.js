@@ -1,6 +1,6 @@
 //TABLA CATEGORIAS//
 module.exports = (sequelize, dataTypes) => {
-    const alias = "Category";
+    const alias = "Categorias";
   
     const cols = {
       Id: {
@@ -9,26 +9,31 @@ module.exports = (sequelize, dataTypes) => {
         autoIncrement : true
   
       },
-      Diciplinas: {
+      Diciplina: {
         type: dataTypes.STRING
   
       },
       
-      IdProductosCategoria: {
-        type: dataTypes.INTEGER,
-        foreignKey: true,
-        autoIncrement: true
-  
-      },
-     
+           
     };
   
     const config = {
-      tableName :"Categorias",
+      tableName :"Category",
       timestamps : false
     };
-  
-  
-    const User = sequelize.define(alias,cols,config);
-    return Category  
+
+    
+     const Categorias = sequelize.define(alias,cols,config);
+     
+     Categorias.associate = function (models) {
+      Categorias.belongsToMany(models.Productos, {
+        as: "ProductoCategoria",
+        through: "ProductoCategoria",
+        foreignKey: "Categorias-Id",
+        otherKey: "Productos-Id",
+        timestamps: false
+      });
+     }
+
+    return Categorias 
   }
